@@ -845,6 +845,9 @@ The result is displayed through the `product_category_query.html` template.
 ```
 
 ---
+**Figure 10.1: Product–Category Query Result**
+
+![Product–Category Query](screenshots/product_category.png)
 
 ### 10.2 Order–Customer Query
 
@@ -888,6 +891,9 @@ CUSTOMER
 ```
 
 ---
+**Figure 10.2: Order–Customer Query Result**
+
+![Order–Customer Query](screenshots/order_customer.png)
 
 ### 10.3 Order Item Details Query
 
@@ -936,6 +942,9 @@ The resulting information can include:
 ```
 
 ---
+**Figure 10.3: Order Item Details Query Result**
+
+![Order Item Details](screenshots/order_item_details.png)
 
 ## 10.4 Complex Query: Customer Purchases
 
@@ -985,6 +994,9 @@ The query can be used to analyze customer purchasing information.
 ```
 
 ---
+**Figure 10.4: Customer Purchases Query Result**
+
+![Customer Purchases](screenshots/customer_purchases.png)
 
 ## 10.5 Complex Query: Category Sales
 
@@ -1051,6 +1063,9 @@ This query provides useful business information for identifying sales performanc
 ```
 
 ---
+**Figure 10.5: Category Sales Query Result**
+
+![Category Sales](screenshots/category_sales.png)
 
 ## 10.6 Query Summary
 
@@ -1215,9 +1230,7 @@ The home page includes links to:
 
 **Figure 12.1: Home Page**
 
-> *Diagram/screenshot will be inserted here later.*
-
----
+![Home Page](screenshots/home_page.png)
 
 ### 12.2 Category Management
 
@@ -1262,9 +1275,7 @@ The product interface also demonstrates the relationship between the Product and
 
 **Figure 12.2: Product Management Interface**
 
-> *Screenshot will be inserted here later.*
-
----
+![Product Management Interface](screenshots/product_list.png)
 
 ### 12.4 Order Management
 
@@ -1512,7 +1523,7 @@ The API was implemented using Django REST Framework and the `ProductSerializer`.
 
 **Figure 13.1: Product API Response**
 
-> *Screenshot will be inserted here later.*
+![Product API Response](screenshots/api_response.png)
 
 ### 13.6 Background Task Testing
 
@@ -1528,7 +1539,7 @@ The system returned a confirmation message indicating that the low-stock backgro
 
 **Figure 13.2: Low-Stock Task Result**
 
-> *Screenshot will be inserted here later.*
+![Low-Stock Task Result](screenshots/low_stock_task.png)
 
 ### 13.7 Database Testing
 
