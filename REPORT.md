@@ -14,18 +14,19 @@
 
 1. [Introduction](#1-introduction)
 2. [Objectives](#2-objectives)
-3. [System Requirements](#3-system-requirements)
-4. [Technology Stack](#4-technology-stack)
-5. [System Features](#5-system-features)
+3. [Technologies Used](#3-technologies-used)
+4. [System Overview](#4-system-overview)
+5. [Project Structure](#5-project-structure)
 6. [Database Design](#6-database-design)
 7. [Django Models and ORM Implementation](#7-django-models-and-orm-implementation)
-8. [System Architecture](#8-system-architecture)
-9. [Implementation](#9-implementation)
+8. [DTO/API Serializers and REST API Implementation](#8-dtoapi-serializers-and-rest-api-implementation)
+9. [Business Service Layer and CRUD Operations](#9-business-service-layer-and-crud-operations)
 10. [Related Queries and Complex Queries](#10-related-queries-and-complex-queries)
 11. [Background/Asynchronous Task Implementation](#11-backgroundasynchronous-task-implementation)
 12. [Web GUI / User Interface Implementation](#12-web-gui--user-interface-implementation)
 13. [Testing and Results](#13-testing-and-results)
 14. [Conclusion and Future Enhancements](#14-conclusion-and-future-enhancements)
+
 
 ---
 
