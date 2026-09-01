@@ -847,8 +847,7 @@ The result is displayed through the `product_category_query.html` template.
 ---
 **Figure 10.1: Product–Category Query Result**
 
-![Product–Category Query](screenshots/product_category.png)
-
+![Product–Category Query](screenshots/product_category_query.png)
 ### 10.2 Order–Customer Query
 
 The Order–Customer query retrieves orders together with the customers who placed them.
@@ -1065,7 +1064,7 @@ This query provides useful business information for identifying sales performanc
 ---
 **Figure 10.5: Category Sales Query Result**
 
-![Category Sales](screenshots/category_sales.png)
+![Category Sales](screenshots/category_sales_query.png)
 
 ## 10.6 Query Summary
 
