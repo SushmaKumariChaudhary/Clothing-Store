@@ -1410,3 +1410,155 @@ category_sales_complex_query.html
 The web GUI provides a complete interface for interacting with the Clothing Store Management System. It connects the Django application layer with the Oracle database and provides CRUD operations, related queries, complex queries, REST API access, and background task functionality through a browser-based interface.
 
 Screenshots of the major interfaces will be added to this section as evidence of the implemented system.
+## 13. Testing and Results
+
+Testing was performed to verify that the Clothing Store Management System works correctly and that the implemented features interact successfully with the Oracle database. The Django development server was used to test the web-based functionality through a browser.
+
+### 13.1 Testing Approach
+
+The system was tested using functional testing. Each major feature was accessed through the web interface and the resulting output was checked.
+
+The main areas tested were:
+
+* Oracle database connectivity
+* Category CRUD operations
+* Product CRUD operations
+* Order CRUD operations
+* Order Item CRUD operations
+* Related queries
+* Complex queries
+* REST API
+* Background task
+* Web navigation and templates
+
+### 13.2 CRUD Operation Testing
+
+| Module     | Operation | Expected Result                                | Result     |
+| ---------- | --------- | ---------------------------------------------- | ---------- |
+| Category   | Create    | New category is stored in the database         | Successful |
+| Category   | Read      | Categories are displayed correctly             | Successful |
+| Category   | Update    | Existing category information is updated       | Successful |
+| Category   | Delete    | Selected category is removed                   | Successful |
+| Product    | Create    | New product is stored in the database          | Successful |
+| Product    | Read      | Products are displayed correctly               | Successful |
+| Product    | Update    | Existing product information is updated        | Successful |
+| Product    | Delete    | Selected product is removed                    | Successful |
+| Order      | Create    | New order is stored in the database            | Successful |
+| Order      | Read      | Orders are displayed with customer information | Successful |
+| Order      | Update    | Existing order information is updated          | Successful |
+| Order      | Delete    | Selected order is removed                      | Successful |
+| Order Item | Create    | New order item is stored                       | Successful |
+| Order Item | Read      | Order items are displayed correctly            | Successful |
+| Order Item | Update    | Existing order item is updated                 | Successful |
+| Order Item | Delete    | Selected order item is removed                 | Successful |
+
+### 13.3 Related Query Testing
+
+The implemented related queries were tested to verify that information from connected tables could be retrieved correctly using Django ORM.
+
+| Query                    | Related Tables                      | Result     |
+| ------------------------ | ----------------------------------- | ---------- |
+| Product-Category Query   | Product, Category                   | Successful |
+| Order-Customer Query     | Order, Customer                     | Successful |
+| Order Item Details Query | Order, Customer, Product, OrderItem | Successful |
+
+The query results were successfully displayed through the corresponding Django templates.
+
+### 13.4 Complex Query Testing
+
+Two complex queries were implemented and tested.
+
+| Complex Query           | Entities Involved                   | Result     |
+| ----------------------- | ----------------------------------- | ---------- |
+| Customer Purchase Query | Customer, Order, OrderItem, Product | Successful |
+| Category Sales Query    | Category, Product, OrderItem        | Successful |
+
+The customer purchase query successfully retrieved customer purchase information by connecting multiple entities.
+
+The category sales query successfully calculated the total quantity sold and total sales amount for each category using Django ORM aggregation functions.
+
+### 13.5 REST API Testing
+
+The Product REST API was tested using the following endpoint:
+
+```text
+/api/products/
+```
+
+The endpoint successfully returned product information in JSON format.
+
+The API was implemented using Django REST Framework and the `ProductSerializer`.
+
+**Figure 13.1: Product API Response**
+
+> *Screenshot will be inserted here later.*
+
+### 13.6 Background Task Testing
+
+The low-stock task was tested through the web endpoint:
+
+```text
+/tasks/check-low-stock/
+```
+
+The task was successfully triggered and produced a low-stock report in the terminal.
+
+The system returned a confirmation message indicating that the low-stock background task had started successfully.
+
+**Figure 13.2: Low-Stock Task Result**
+
+> *Screenshot will be inserted here later.*
+
+### 13.7 Database Testing
+
+The application was tested against the Oracle Database using the `CLOTHING_STORE` schema.
+
+The Django application successfully connected to the Oracle database and performed database operations through Django ORM.
+
+The database operations tested included:
+
+* Inserting records
+* Retrieving records
+* Updating records
+* Deleting records
+* Joining related entities
+* Performing aggregate calculations
+
+### 13.8 User Interface Testing
+
+The major web pages were opened through the Django development server and checked for correct rendering.
+
+The following interfaces were successfully tested:
+
+* Home page
+* Category list and forms
+* Product list and forms
+* Order list and forms
+* Order Item list and forms
+* Related query pages
+* Complex query pages
+* API endpoint
+* Background task endpoint
+
+The pages successfully loaded using the common `base.html` layout and Django template inheritance.
+
+### 13.9 Overall Test Result
+
+The testing process confirmed that the major components of the Clothing Store Management System were functioning as expected.
+
+The final testing results can be summarized as follows:
+
+| Test Area                  | Status     |
+| -------------------------- | ---------- |
+| Oracle Database Connection | Successful |
+| Category CRUD              | Successful |
+| Product CRUD               | Successful |
+| Order CRUD                 | Successful |
+| Order Item CRUD            | Successful |
+| Related Queries            | Successful |
+| Complex Queries            | Successful |
+| REST API                   | Successful |
+| Background Task            | Successful |
+| Web GUI                    | Successful |
+
+Therefore, the implemented system successfully satisfies the major functional requirements of the Clothing Store Management System.
