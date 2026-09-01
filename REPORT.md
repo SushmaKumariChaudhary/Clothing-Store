@@ -892,7 +892,7 @@ CUSTOMER
 ---
 **Figure 10.2: Order–Customer Query Result**
 
-![Order–Customer Query](screenshots/order_customer.png)
+![Order–Customer Query](screenshots/order_management.png)
 
 ### 10.3 Order Item Details Query
 
@@ -943,7 +943,7 @@ The resulting information can include:
 ---
 **Figure 10.3: Order Item Details Query Result**
 
-![Order Item Details](screenshots/order_item_details.png)
+![Order Item Details](screenshots/order_item_management.png)
 
 ## 10.4 Complex Query: Customer Purchases
 
@@ -995,7 +995,7 @@ The query can be used to analyze customer purchasing information.
 ---
 **Figure 10.4: Customer Purchases Query Result**
 
-![Customer Purchases](screenshots/customer_purchases.png)
+![Customer Purchases](screenshots/order_item_management.png)
 
 ## 10.5 Complex Query: Category Sales
 
@@ -1274,7 +1274,7 @@ The product interface also demonstrates the relationship between the Product and
 
 **Figure 12.2: Product Management Interface**
 
-![Product Management Interface](screenshots/product_list.png)
+![Product Management Interface](screenshots/product_management.png)
 
 ### 12.4 Order Management
 
@@ -1522,7 +1522,11 @@ The API was implemented using Django REST Framework and the `ProductSerializer`.
 
 **Figure 13.1: Product API Response**
 
-![Product API Response](screenshots/api_response.png)
+![Product API Response](screenshots/product_api.png)
+
+**Figure 13.1: Product API Response**
+
+![Product API Response](screenshots/product_api2.png)
 
 ### 13.6 Background Task Testing
 
