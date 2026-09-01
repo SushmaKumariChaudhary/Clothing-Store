@@ -1521,11 +1521,11 @@ The endpoint successfully returned product information in JSON format.
 
 The API was implemented using Django REST Framework and the `ProductSerializer`.
 
-**Figure 13.1: Product API Response**
+**Figure 13.1: Product API Response – Screenshot 1**
 
 ![Product API Response](screenshots/product_api.png)
 
-**Figure 13.1: Product API Response**
+**Figure 13.1: Product API Response – Screenshot 2**
 
 ![Product API Response](screenshots/product_api2.png)
 
