@@ -1173,3 +1173,240 @@ The task output can be observed in the Django development server terminal.
 The low-stock monitoring feature demonstrates how an enterprise application can perform a separate inventory-related processing task.
 
 The implementation uses a dedicated task function, a Django view for triggering the task, and a URL endpoint for accessing the functionality through the web application.
+## 12. Web GUI / User Interface Implementation
+
+The Clothing Store Management System provides a web-based graphical user interface (GUI) developed using Django templates, HTML, CSS, and Bootstrap. The GUI allows users to interact with the database through a simple and user-friendly interface without directly executing SQL commands.
+
+### 12.1 Home Page
+
+The system provides a home page that acts as the main entry point of the application. It provides navigation to the major sections of the Clothing Store Management System.
+
+The home page includes links to:
+
+* Category Management
+* Product Management
+* Order Management
+* Order Item Management
+* Related Queries
+* Complex Queries
+* Product REST API
+* Low-Stock Background Task
+
+**Figure 12.1: Home Page**
+
+> *Diagram/screenshot will be inserted here later.*
+
+---
+
+### 12.2 Category Management
+
+The Category Management interface provides CRUD operations for product categories.
+
+The user can:
+
+* View all categories
+* Add a new category
+* Edit an existing category
+* Delete a category
+
+The following Django templates are used:
+
+* `category_list.html`
+* `category_form.html`
+* `category_confirm_delete.html`
+
+---
+
+### 12.3 Product Management
+
+The Product Management interface allows users to manage products stored in the Oracle database.
+
+The user can:
+
+* View all products
+* Add a new product
+* Edit product information
+* Delete products
+* View products together with their categories
+
+The following templates are used:
+
+* `product_list.html`
+* `product_create.html`
+* `product_update.html`
+* `product_confirm_delete.html`
+* `product_category_query.html`
+
+The product interface also demonstrates the relationship between the Product and Category entities.
+
+**Figure 12.2: Product Management Interface**
+
+> *Screenshot will be inserted here later.*
+
+---
+
+### 12.4 Order Management
+
+The Order Management interface provides CRUD functionality for customer orders.
+
+The user can:
+
+* View orders
+* Create new orders
+* Update existing orders
+* Delete orders
+* View orders together with customer information
+
+The following templates are used:
+
+* `order_list.html`
+* `order_create.html`
+* `order_update.html`
+* `order_confirm_delete.html`
+* `order_customer_query.html`
+
+The interface demonstrates the relationship between the Customer and Order entities.
+
+---
+
+### 12.5 Order Item Management
+
+Order items represent individual products included in an order.
+
+The interface allows users to:
+
+* View order items
+* Add order items
+* Update order items
+* Delete order items
+* Select an existing order
+* Select an existing product
+* View detailed order-item information
+
+The following templates are used:
+
+* `order_item_list.html`
+* `order_item_create.html`
+* `order_item_update.html`
+* `order_item_confirm_delete.html`
+* `order_item_details_query.html`
+
+This interface demonstrates the relationships between Order, Product, and OrderItem entities.
+
+---
+
+### 12.6 Related Query Interfaces
+
+The system includes several pages for displaying related data from multiple database tables.
+
+The implemented related queries include:
+
+1. Products with their categories
+2. Orders with their customers
+3. Order items with order and product details
+
+These queries use Django ORM relationship features such as `select_related()` to efficiently retrieve related objects.
+
+The query pages provide a user-friendly way to view related information without directly writing SQL queries.
+
+---
+
+### 12.7 Complex Query Interfaces
+
+The system also provides complex query pages involving multiple related entities.
+
+The implemented complex queries include:
+
+* Customer purchase information
+* Category-wise sales information
+
+The customer purchase query combines information from Customer, Order, OrderItem, and Product.
+
+The category sales query calculates:
+
+* Total quantity sold
+* Total sales amount
+
+Django ORM aggregation functions such as `Sum()`, `F()`, and `ExpressionWrapper()` are used to perform these calculations.
+
+The results are displayed through dedicated Django templates.
+
+---
+
+### 12.8 REST API Interface
+
+A REST API endpoint has been implemented for retrieving product information.
+
+The API endpoint is:
+
+```text
+/api/products/
+```
+
+The endpoint returns product data in JSON format using Django REST Framework and the `ProductSerializer`.
+
+This provides a machine-readable interface that can be used by other applications or frontend systems.
+
+---
+
+### 12.9 Low-Stock Task Interface
+
+The system includes a web endpoint for triggering the low-stock background task.
+
+The endpoint is:
+
+```text
+/tasks/check-low-stock/
+```
+
+When the endpoint is accessed, the low-stock task is executed and a confirmation message is returned.
+
+The task checks product stock levels and generates a low-stock report in the terminal.
+
+---
+
+### 12.10 Navigation and Common Layout
+
+A common `base.html` template is used to maintain a consistent layout throughout the application.
+
+Individual pages extend the base template using Django template inheritance.
+
+This approach provides:
+
+* Consistent navigation
+* Reusable HTML structure
+* Reduced code duplication
+* Consistent styling
+* Easier maintenance
+
+The main templates used in the project include:
+
+```text
+base.html
+category_list.html
+category_form.html
+category_confirm_delete.html
+product_list.html
+product_create.html
+product_update.html
+product_confirm_delete.html
+order_list.html
+order_create.html
+order_update.html
+order_confirm_delete.html
+order_item_list.html
+order_item_create.html
+order_item_update.html
+order_item_confirm_delete.html
+product_category_query.html
+order_customer_query.html
+order_item_details_query.html
+customer_purchase_complex_query.html
+category_sales_complex_query.html
+```
+
+### 12.11 Summary
+
+The web GUI provides a complete interface for interacting with the Clothing Store Management System. It connects the Django application layer with the Oracle database and provides CRUD operations, related queries, complex queries, REST API access, and background task functionality through a browser-based interface.
+
+Screenshots of the major interfaces will be added to this section as evidence of the implemented system.
