@@ -1,5 +1,36 @@
 # Clothing Store Management System
 
+# Clothing Store Management System
+
+**Name:** Sushma Kumari Chaudhary
+**College:** KFA Business School & IT
+**Course:** BCS.IT 4th Semester
+
+**Project Title:** Clothing Store Management System
+**Technology:** Python, Django, Oracle Database
+**Academic Year:** 2026
+
+---
+
+## Table of Contents
+
+1. [Introduction](#1-introduction)
+2. [Objectives](#2-objectives)
+3. [System Requirements](#3-system-requirements)
+4. [Technology Stack](#4-technology-stack)
+5. [System Features](#5-system-features)
+6. [Database Design](#6-database-design)
+7. [Django Models and ORM Implementation](#7-django-models-and-orm-implementation)
+8. [System Architecture](#8-system-architecture)
+9. [Implementation](#9-implementation)
+10. [Related Queries and Complex Queries](#10-related-queries-and-complex-queries)
+11. [Background/Asynchronous Task Implementation](#11-backgroundasynchronous-task-implementation)
+12. [Web GUI / User Interface Implementation](#12-web-gui--user-interface-implementation)
+13. [Testing and Results](#13-testing-and-results)
+14. [Conclusion and Future Enhancements](#14-conclusion-and-future-enhancements)
+
+---
+
 ## Enterprise Application Development Report
 
 **Name:** Sushma Kumari Chaudhary
