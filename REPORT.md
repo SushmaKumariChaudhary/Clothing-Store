@@ -1,7 +1,5 @@
 # Clothing Store Management System
 
-# Clothing Store Management System
-
 **Name:** Sushma Kumari Chaudhary
 **College:** KFA Business School & IT
 **Course:** BCS.IT 4th Semester
@@ -28,14 +26,6 @@
 12. [Web GUI / User Interface Implementation](#12-web-gui--user-interface-implementation)
 13. [Testing and Results](#13-testing-and-results)
 14. [Conclusion and Future Enhancements](#14-conclusion-and-future-enhancements)
-
----
-
-## Enterprise Application Development Report
-
-**Name:** Sushma Kumari Chaudhary
-**College:** KFA Business School & IT
-**Course:** BCS.IT 4th Semester
 
 ---
 
