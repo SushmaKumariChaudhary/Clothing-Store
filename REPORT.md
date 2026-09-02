@@ -87,8 +87,8 @@ The overall relationship can be represented as:
 **Customer → Order → Order Item → Product → Category**
 
 > **Figure 1: Entity Relationship Diagram (ERD)**
->
-> ![Entity Relationship Diagram](screenshots/entity_relationship_diagram.png)
+
+![Entity Relationship Diagram](screenshots/entity_relationship_diagram.png)
 
 
 ## 5. Project Structure
