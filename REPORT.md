@@ -86,7 +86,7 @@ The overall relationship can be represented as:
 
 **Customer → Order → Order Item → Product → Category**
 
-> **Figure 1: Entity Relationship Diagram (ERD)**
+> **Figure 4.1: Entity Relationship Diagram (ERD)**
 
 ![Entity Relationship Diagram](screenshots/entity_relationship_diagram.png)
 
@@ -232,7 +232,7 @@ ORDER_ITEM
 CATEGORY
 ```
 
-> **Figure 2: Database Relationship Diagram**
+> **Figure 6.1: Database Relationship Diagram**
 
 ![Database Relationship Diagram](screenshots/database_relationship_diagram.png)
 
@@ -1528,7 +1528,7 @@ The API was implemented using Django REST Framework and the `ProductSerializer`.
 
 ![Product API Response](screenshots/product_api.png)
 
-**Figure 13.1: Product API Response – Screenshot 2**
+**Figure 13.2: Product API Response – Screenshot 2**
 
 ![Product API Response](screenshots/product_api2.png)
 
@@ -1544,7 +1544,7 @@ The task was successfully triggered and produced a low-stock report in the termi
 
 The system returned a confirmation message indicating that the low-stock background task had started successfully.
 
-**Figure 13.2: Low-Stock Task Result**
+**Figure 13.3: Low-Stock Task Result**
 
 ![Low-Stock Task Result](screenshots/low_stock_task.png)
 
