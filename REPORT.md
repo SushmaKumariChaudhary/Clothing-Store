@@ -87,6 +87,7 @@ The overall relationship can be represented as:
 **Customer → Order → Order Item → Product → Category**
 
 > **Figure 1: Entity Relationship Diagram (ERD)**
+>
 > ![Entity Relationship Diagram](screenshots/entity_relationship_diagram.png)
 
 
@@ -232,6 +233,7 @@ CATEGORY
 ```
 
 > **Figure 2: Database Relationship Diagram**
+
 ![Database Relationship Diagram](screenshots/database_relationship_diagram.png)
 
 ### 6.7 Database Design Summary
