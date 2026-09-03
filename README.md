@@ -1014,33 +1014,74 @@ These queries demonstrate the use of Django ORM relationships and database aggre
 
 The implemented queries were tested successfully using the Django application.
 
-Example Django ORM results included:
+### 21.1 Product QuerySet Result
 
-```text
-<QuerySet [{'category_id': 1, 'category_name': 'Shoes', ...}]>
+The following screenshot shows product records retrieved from the Oracle Database using Django ORM.
+
+```python
+Product.objects.all()
 ```
 
-Customer-related query results were also successfully retrieved:
+![Product QuerySet Result](screenshots/product_queryset.png)
 
-```text
-<QuerySet [{'customer_id': 1, 'first_name': 'Sita', ...}]>
-```
-
-Order query results were successfully retrieved:
-
-```text
-<QuerySet [{'order_id': 1, 'customer_id': 1, ...}]>
-```
-
-Order item query results were successfully retrieved:
-
-```text
-<QuerySet [{'order_item_id': 1, 'order_id': 1,
-'product_id': 10, ...}]>
-```
-
-These results confirm that the Django application is successfully retrieving data from the Oracle Database through the ORM.
-
-> **Screenshots of the query results will be inserted here later.**
+**Figure 1: Product records retrieved using Django ORM**
 
 ---
+
+### 21.2 Category QuerySet Result
+
+The following screenshot shows category records retrieved from the Oracle Database using Django ORM.
+
+```python
+Category.objects.all()
+```
+
+![Category QuerySet Result](screenshots/category_queryset.png)
+
+**Figure 2: Category records retrieved using Django ORM**
+
+---
+
+### 21.3 Customer QuerySet Result
+
+The following screenshot shows customer records retrieved from the Oracle Database using Django ORM.
+
+```python
+Customer.objects.all()
+```
+
+![Customer QuerySet Result](screenshots/customer_queryset.png)
+
+**Figure 3: Customer records retrieved using Django ORM**
+
+---
+
+### 21.4 Order QuerySet Result
+
+The following screenshot shows order records retrieved from the Oracle Database using Django ORM.
+
+```python
+Order.objects.all()
+```
+
+![Order QuerySet Result](screenshots/order_queryset.png)
+
+**Figure 4: Order records retrieved using Django ORM**
+
+---
+
+### 21.5 OrderItem QuerySet Result
+
+The following screenshot shows order-item records retrieved from the Oracle Database using Django ORM.
+
+```python
+OrderItem.objects.all()
+```
+
+![OrderItem QuerySet Result](screenshots/orderitem_queryset.png)
+
+**Figure 5: Order item records retrieved using Django ORM**
+
+---
+
+These results confirm that the Django application is successfully retrieving data from the Oracle Database through Django ORM.
