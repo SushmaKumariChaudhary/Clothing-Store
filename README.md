@@ -1022,7 +1022,7 @@ The following screenshot shows product records retrieved from the Oracle Databas
 Product.objects.all()
 ```
 
-![Product QuerySet Result](screenshots/product_queryset.png)
+![Product QuerySet Result](screenshots/Product Queryset.png)
 
 **Figure 1: Product records retrieved using Django ORM**
 
@@ -1036,7 +1036,7 @@ The following screenshot shows category records retrieved from the Oracle Databa
 Category.objects.all()
 ```
 
-![Category QuerySet Result](screenshots/category_queryset.png)
+![Category QuerySet Result](screenshots/Category Queryset.png)
 
 **Figure 2: Category records retrieved using Django ORM**
 
@@ -1050,7 +1050,7 @@ The following screenshot shows customer records retrieved from the Oracle Databa
 Customer.objects.all()
 ```
 
-![Customer QuerySet Result](screenshots/customer_queryset.png)
+![Customer QuerySet Result](screenshots/Customer Queryset.png)
 
 **Figure 3: Customer records retrieved using Django ORM**
 
@@ -1064,7 +1064,7 @@ The following screenshot shows order records retrieved from the Oracle Database 
 Order.objects.all()
 ```
 
-![Order QuerySet Result](screenshots/order_queryset.png)
+![Order QuerySet Result](screenshots/Order Queryset.png)
 
 **Figure 4: Order records retrieved using Django ORM**
 
@@ -1078,7 +1078,7 @@ The following screenshot shows order-item records retrieved from the Oracle Data
 OrderItem.objects.all()
 ```
 
-![OrderItem QuerySet Result](screenshots/orderitem_queryset.png)
+![OrderItem QuerySet Result](screenshots/OrderItem Queryset.png)
 
 **Figure 5: Order item records retrieved using Django ORM**
 
