@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Purchase Details</title>
+</head>
+<body>
+
+<h1>Customer Purchase Details</h1>
+
+<p>
+    Complex query involving Customer, Order, Order Item, and Product.
+</p>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Customer</th>
+        <th>Order ID</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Total</th>
+    </tr>
+
+    {% for item in order_items %}
+    <tr>
+        <td>
+            {{ item.order.customer.first_name }}
+            {{ item.order.customer.last_name }}
+        </td>
+        <td>{{ item.order.order_id }}</td>
+        <td>{{ item.product.product_name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>Rs. {{ item.unit_price }}</td>
+        <td>Rs. {% widthratio item.quantity 1 item.unit_price %}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="6">No purchase records found.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="{% url 'order_item_list' %}">
+    Back to Order Items
+</a>
+
+</body>
+</html>

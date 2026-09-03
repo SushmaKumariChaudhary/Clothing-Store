@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% if category %}Edit Category{% else %}Add Category{% endif %}
+        - Clothing Store
+    </title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>
+        {% if category %}
+            Edit Category
+        {% else %}
+            Add Category
+        {% endif %}
+    </h1>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <label for="category_name">Category Name</label>
+
+        <input
+            type="text"
+            id="category_name"
+            name="category_name"
+            value="{{ category.category_name|default:'' }}"
+            required
+        >
+
+        <label for="description">Description</label>
+
+        <textarea
+            id="description"
+            name="description"
+        >{{ category.description|default:'' }}</textarea>
+
+        <button type="submit">
+            {% if category %}Update Category{% else %}Add Category{% endif %}
+        </button>
+
+        <a href="{% url 'category_list' %}" class="back">
+            Cancel
+        </a>
+
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1>Clothing Store Management System</h1>
+        <p class="lead">
+            Welcome to the Clothing Store Management System
+        </p>
+        <p>
+            Manage categories, products, orders, and order items from one place.
+        </p>
+    </div>
+
+```
+<div class="row mt-5">
+
+    <div class="col-md-3 mb-3">
+        <div class="card text-center p-3">
+            <h4>Categories</h4>
+            <p>Manage product categories.</p>
+            <a href="{% url 'category_list' %}" class="btn btn-primary">
+                View Categories
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card text-center p-3">
+            <h4>Products</h4>
+            <p>Manage store products and stock.</p>
+            <a href="{% url 'product_list' %}" class="btn btn-primary">
+                View Products
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card text-center p-3">
+            <h4>Orders</h4>
+            <p>Manage customer orders.</p>
+            <a href="{% url 'order_list' %}" class="btn btn-primary">
+                View Orders
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card text-center p-3">
+            <h4>Order Items</h4>
+            <p>Manage individual order items.</p>
+            <a href="{% url 'order_item_list' %}" class="btn btn-primary">
+                View Order Items
+            </a>
+        </div>
+    </div>
+
+</div>
+```
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Category Sales Summary</title>
+</head>
+<body>
+
+<h1>Category Sales Summary</h1>
+
+<p>
+    Complex query involving Category, Product, Order Item, and Order.
+</p>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Category</th>
+        <th>Total Quantity Sold</th>
+        <th>Total Sales</th>
+    </tr>
+
+    {% for category in categories %}
+    <tr>
+        <td>{{ category.category_name }}</td>
+
+        <td>
+            {{ category.total_quantity|default:0 }}
+        </td>
+
+        <td>
+            Rs. {{ category.total_sales|default:0 }}
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="3">No category sales data found.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="{% url 'product_list' %}">
+    Back to Products
+</a>
+
+</body>
+</html>

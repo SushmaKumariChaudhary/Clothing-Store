@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clothing Store Products</title>
+</head>
+<body>
+
+<h1>Clothing Store Products</h1>
+
+<a href="{% url 'product_create' %}">
+    Add New Product
+</a>
+
+<br><br>
+
+<table border="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.product_id }}</td>
+            <td>{{ product.product_name }}</td>
+            <td>{{ product.category.category_name }}</td>
+            <td>Rs. {{ product.price }}</td>
+            <td>{{ product.stock_quantity }}</td>
+
+            <td>
+                <a href="{% url 'product_update' product.product_id %}">
+                    Edit
+                </a>
+
+                |
+
+                <a href="{% url 'product_delete' product.product_id %}">
+                    Delete
+                </a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">No products available.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

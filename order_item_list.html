@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Items</title>
+</head>
+<body>
+
+<h1>Clothing Store Order Items</h1>
+
+<a href="{% url 'order_list' %}">
+    Back to Orders
+</a>
+
+<br><br>
+
+<table border="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th>Order Item ID</th>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for item in order_items %}
+        <tr>
+            <td>{{ item.order_item_id }}</td>
+            <td>{{ item.order.order_id }}</td>
+            <td>
+                {{ item.order.customer.first_name }}
+                {{ item.order.customer.last_name }}
+            </td>
+            <td>{{ item.product.product_name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>Rs. {{ item.unit_price }}</td>
+        </tr>
+
+        {% empty %}
+        <tr>
+            <td colspan="6">No order items available.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

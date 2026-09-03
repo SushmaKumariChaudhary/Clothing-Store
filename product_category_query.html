@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products by Category</title>
+</head>
+<body>
+
+<h1>Products with Categories</h1>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Product Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Stock</th>
+    </tr>
+
+    {% for product in products %}
+    <tr>
+        <td>{{ product.product_name }}</td>
+        <td>{{ product.category.category_name }}</td>
+        <td>Rs. {{ product.price }}</td>
+        <td>{{ product.stock_quantity }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="4">No products found.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="{% url 'product_list' %}">
+    Back to Products
+</a>
+
+</body>
+</html>

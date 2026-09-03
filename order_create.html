@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Order</title>
+</head>
+<body>
+
+<h1>Add New Order</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Order ID:</label><br>
+    <input type="number" name="order_id" required>
+    <br><br>
+
+    <label>Customer:</label><br>
+    <select name="customer_id" required>
+        <option value="">-- Select Customer --</option>
+
+        {% for customer in customers %}
+            <option value="{{ customer.customer_id }}">
+                {{ customer.first_name }} {{ customer.last_name }}
+            </option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    <label>Order Date:</label><br>
+    <input type="date" name="order_date" required>
+    <br><br>
+
+    <label>Order Status:</label><br>
+    <select name="order_status" required>
+        <option value="">-- Select Status --</option>
+        <option value="PENDING">PENDING</option>
+        <option value="CONFIRMED">CONFIRMED</option>
+        <option value="SHIPPED">SHIPPED</option>
+        <option value="DELIVERED">DELIVERED</option>
+        <option value="CANCELLED">CANCELLED</option>
+    </select>
+    <br><br>
+
+    <label>Total Amount:</label><br>
+    <input type="number" name="total_amount"
+           step="0.01" required>
+    <br><br>
+
+    <button type="submit">Add Order</button>
+
+</form>
+
+<br>
+
+<a href="{% url 'order_list' %}">
+    Back to Orders
+</a>
+
+</body>
+</html>

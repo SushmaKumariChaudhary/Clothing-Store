@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Order Item</title>
+</head>
+<body>
+
+<h1>Delete Order Item</h1>
+
+<p>
+    Are you sure you want to delete
+    <strong>Order Item #{{ order_item.order_item_id }}</strong>?
+</p>
+
+<p>
+    Order: #{{ order_item.order.order_id }}
+</p>
+
+<p>
+    Product: {{ order_item.product.product_name }}
+</p>
+
+<p>
+    Quantity: {{ order_item.quantity }}
+</p>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <button type="submit">Yes, Delete</button>
+
+    <a href="{% url 'order_item_list' %}">
+        Cancel
+    </a>
+</form>
+
+</body>
+</html>

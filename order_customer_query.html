@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders with Customers</title>
+</head>
+<body>
+
+<h1>Orders with Customers</h1>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Order ID</th>
+        <th>Customer</th>
+        <th>Order Date</th>
+        <th>Status</th>
+        <th>Total Amount</th>
+    </tr>
+
+    {% for order in orders %}
+    <tr>
+        <td>{{ order.order_id }}</td>
+        <td>
+            {{ order.customer.first_name }}
+            {{ order.customer.last_name }}
+        </td>
+        <td>{{ order.order_date }}</td>
+        <td>{{ order.order_status }}</td>
+        <td>Rs. {{ order.total_amount }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="5">No orders found.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="{% url 'order_list' %}">
+    Back to Orders
+</a>
+
+</body>
+</html>
